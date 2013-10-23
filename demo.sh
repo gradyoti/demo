@@ -24,7 +24,6 @@ set -o nounset                              # Treat unset variables as an error
 #===============================================================================
 declare -rx SCRIPT=${0##*/}                     # the name of this script
 declare -rx mkdir='/bin/mkdir'                  # the mkdir(1) command
-OPERATION=
 
 #===============================================================================
 #   SANITY CHECKS
