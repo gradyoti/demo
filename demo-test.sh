@@ -26,5 +26,8 @@ echo "Testing addition."
 echo "Testing subtraction."
 [[ $(./demo.sh -s 4 2) != 2 ]] && echo "FAILED!"; STATUS=1
 
+echo "Testing multiplication."
+[[ $(./demo.sh -m 4 2) != 8 ]] && echo "FAILED!"; STATUS=1
+
 [[ $STATUS == 0 ]] && echo "PASSED!"
 exit $STATUS
