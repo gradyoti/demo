@@ -58,6 +58,7 @@ function usage ()
   -h|help       Display this message
   -v|version    Display script version
   -a|addition   Add two numbers
+  -s|subtraction   Subtract two numbers
 
 	EOT
 }    # ----------  end of function usage  ----------
