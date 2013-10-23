@@ -67,7 +67,7 @@ function usage ()
 #  Handle command line arguments
 #-----------------------------------------------------------------------
 
-while getopts ":hvas" opt
+while getopts ":hvam" opt
 do
   case $opt in
 
@@ -78,6 +78,8 @@ do
     a|add     )  echo $(($2 + $3)); exit 0   ;;
 
     s|subtract     )  echo $(($2 - $3)); exit 0   ;;
+
+    m|multiply     )  echo $(($2 * $3)); exit 0   ;;
 
     \? )  echo -e "\n  Option does not exist : $OPTARG\n"
           usage; exit 1   ;;
