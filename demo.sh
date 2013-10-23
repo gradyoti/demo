@@ -66,7 +66,7 @@ function usage ()
 #  Handle command line arguments
 #-----------------------------------------------------------------------
 
-while getopts ":hva" opt
+while getopts ":hvas" opt
 do
   case $opt in
 
@@ -75,6 +75,8 @@ do
     v|version  )  echo "$0 -- Version $ScriptVersion"; exit 0   ;;
 
     a|add     )  echo $(($2 + $3)); exit 0   ;;
+
+    s|subtract     )  echo $(($2 - $3)); exit 0   ;;
 
     \? )  echo -e "\n  Option does not exist : $OPTARG\n"
           usage; exit 1   ;;
