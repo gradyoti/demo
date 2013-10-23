@@ -52,6 +52,8 @@ function usage ()
 {
 	cat <<- EOT
 
+  Demo bash script for basic integer arithmetic.
+
   Usage :  ${0##/*/} [options] [--] 
 
   Options: 
