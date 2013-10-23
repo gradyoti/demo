@@ -24,6 +24,7 @@ set -o nounset                              # Treat unset variables as an error
 #===============================================================================
 declare -rx SCRIPT=${0##*/}                     # the name of this script
 declare -rx mkdir='/bin/mkdir'                  # the mkdir(1) command
+OPERATION=
 
 #===============================================================================
 #   SANITY CHECKS
@@ -57,6 +58,7 @@ function usage ()
   Options: 
   -h|help       Display this message
   -v|version    Display script version
+  -a|addition   Add two numbers
 
 	EOT
 }    # ----------  end of function usage  ----------
@@ -65,13 +67,15 @@ function usage ()
 #  Handle command line arguments
 #-----------------------------------------------------------------------
 
-while getopts ":hv" opt
+while getopts ":hva" opt
 do
   case $opt in
 
     h|help     )  usage; exit 0   ;;
 
     v|version  )  echo "$0 -- Version $ScriptVersion"; exit 0   ;;
+
+    a|add     )  echo $(($2 + $3)); exit 0   ;;
 
     \? )  echo -e "\n  Option does not exist : $OPTARG\n"
           usage; exit 1   ;;
@@ -84,4 +88,5 @@ shift $(($OPTIND-1))
 #===============================================================================
 #   STATISTICS / CLEANUP
 #===============================================================================
+
 exit 0
