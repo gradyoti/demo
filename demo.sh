@@ -59,6 +59,7 @@ function usage ()
   -v|version    Display script version
   -a|addition   Add two numbers
   -s|subtraction   Subtract two numbers
+  -m|multiply   Multiply two numbers
 
 	EOT
 }    # ----------  end of function usage  ----------
