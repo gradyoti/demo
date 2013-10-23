@@ -23,5 +23,8 @@ STATUS=0
 echo "Testing addition."
 [ $(./demo.sh -a 2 2) != 4 ] && echo "FAILED!"; STATUS=1
 
+echo "Testing subtraction."
+[[ $(./demo.sh -s 4 2) != 2 ]] && echo "FAILED!"; STATUS=1
+
 [[ $STATUS == 0 ]] && echo "PASSED!"
 exit $STATUS
