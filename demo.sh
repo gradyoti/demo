@@ -70,7 +70,7 @@ function usage ()
 #  Handle command line arguments
 #-----------------------------------------------------------------------
 
-while getopts ":hvam" opt
+while getopts ":hvasm" opt
 do
   case $opt in
 
